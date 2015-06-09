@@ -11,11 +11,17 @@ typedef struct ENV_HISTROY{
 ENV_HISTORY envhis;
 
 /*保存文件或目录相关信息*/
-typedef struct files_Content                   
-{  
+typedef struct files_Content
+{
 	FILETIME time;
 	char name[200];
 	int type;
 	int size;
 	struct files_Content *next;
 }files_Content;
+
+ struct ProcessWindow
+{
+    DWORD dwProcessId;
+    HWND hwndWindow;
+};
